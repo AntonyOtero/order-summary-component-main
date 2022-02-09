@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,12 +13,24 @@ html, body {
   font-size: 16px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url(./images/pattern-background-desktop.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 .card {
   width: 450px;
   height: 697px;
+  background: #fff;
   border-radius: 20px;
   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
 }
@@ -26,5 +44,102 @@ html, body {
   border-radius: 20px 20px 0px 0px;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.summary {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary_title,
+.summary_note {
+  text-align: center;
+}
+
+.summary_title {
+  margin: 0 0 17px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 37px;
+}
+
+.summary_note {
+  margin: 0 0 20px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #717fa6;
+}
+
+.subscription {
+  padding: 25px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f9ff;
+  border-radius: 11px;
+}
+
+.subscription_label {
+  display: flex;
+  align-items: center;
+}
+
+.label_image {
+  margin: 0px 20px 0px 0px;
+}
+
+.label_text_title {
+  margin: 0px 0px 6px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1f2e55;
+}
+
+.label_text_pricing {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #717fa6;
+}
+
+.subscription_change {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #382ae1;
+}
+
+.btn {
+  margin: 32px 0;
+  padding: 15px 0;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  background: #382AE1;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  border: none;
+  border-radius: 11px;
+}
+
+.cancel {
+  text-align: center;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  color: #717fa6;
+  text-decoration: none;
+}
+
+.attribution {
+  padding: 24px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
