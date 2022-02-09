@@ -35,9 +35,13 @@ body {
   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
 }
 
-.hero {
-  width: 100%;
+.hero,
+.hero img {
   border-radius: 20px 20px 0px 0px;
+}
+
+.hero img {
+  width: 100%;
 }
 
 .summary {
